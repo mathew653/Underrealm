@@ -21,40 +21,40 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeHooks;
 
 public class UnderStone extends UnderRealmBaseBlock {
-	public static final byte UnderStoneTypeCount=4+7;
+    public static final byte UnderStoneTypeCount=4+7;
     @SideOnly(Side.CLIENT)
     private Icon[] iconArray;
 
-	public UnderStone(int par1, Material par2Material) {
-		super(par1, par2Material);
-	}
+    public UnderStone(int par1, Material par2Material) {
+    	super(par1, par2Material);
+    }
 	
-	public int damageDropped(int par1)
+    public int damageDropped(int par1)
     {
-		switch (par1)
-		{
-			case 3: return par1;	//Heated won't actually break but for now it will drop its self.
+	switch (par1)
+	{
+		case 3: return par1;	//Heated won't actually break but for now it will drop its self.
 			
-			//Spirit pillars drop them self'ves(allows middle click op to work)
-			case 4:  return par1; 
-			case 5:  return par1; 
+		//Spirit pillars drop them self'ves(allows middle click op to work)
+		case 4:  return par1; 
+		case 5:  return par1; 
     		case 6:  return par1;
     		case 7:  return par1;
     		case 8:  return par1;
     		case 9:  return par1;
     		case 10: return par1;
     		
-			default: return 1;		//Unless otherwise specified, we should shatter into cobble.
-		}
+		default: return 1;		//Unless otherwise specified, we should shatter into cobble.
+	}
     }
 	
-	public int quantityDropped(int meta, int fortune, Random random)
+    public int quantityDropped(int meta, int fortune, Random random)
     {
-        if (meta == 3) { return 0; }
-        return 1;
+       	if (meta == 3) { return 0; }
+       	return 1;
     }
 	
-	/**
+    /**
      * Called when a player removes a block.  This is responsible for
      * actually destroying the block, and the block is intact at time of call.
      * This is called regardless of whether the player can harvest the block or
@@ -100,9 +100,9 @@ public class UnderStone extends UnderRealmBaseBlock {
         Block block = blocksList[world.getBlockId(x, y, z)];
         if (block != null && block != this)
         {
-            return block.getLightValue(world, x, y, z);
-        }
-        return lightValue[blockID];
+           	return block.getLightValue(world, x, y, z);
+       	}
+       	return lightValue[blockID];
     }
     
     public boolean canSilkHarvest(World world, EntityPlayer player, int x, int y, int z, int metadata)
