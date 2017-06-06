@@ -1,0 +1,16 @@
+[
+{
+  "modid": "UnderRealmCore",
+  "name": "Under Realm Mod",
+  "description": "The under realm mod.",
+  "version": "internal",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [""],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
